@@ -138,11 +138,12 @@ $(document).ready(function(evt){
 		//播放开始初始化样式
 		startStyle();
 
+		//如果当前正在处于加载状态则直接
+		if(!isNext) { return; }
+		isNext = false;
+
 		//加载音频
 		getSong(songsURL, null, function(res){
-			//如果当前正在处于加载状态则直接
-			if(!isNext) { return; }
-			isNext = false;
 
 			//随机获取歌曲
 			song = res.song[Math.floor(Math.random() * res.song.length)];
