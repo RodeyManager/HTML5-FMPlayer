@@ -8,6 +8,30 @@
 			"duration": "4.10",
 			"image": "assets/images/v_106419746_m_601_m1_160_90.jpg",
 			"lrc": "assets/lrc/小苹果.lrc"
+		},
+		{
+			"title": "五月天 - 天使",
+			"url": "assets/audio/五月天 - 天使.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "assets/images/108041507.jpg",
+			"lrc": "assets/lrc/天使.lrc"
+		},
+		{
+			"title": "Alizee - I`m Not Twenty",
+			"url": "assets/audio/Alizee - I`m Not Twenty.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "assets/images/3902254189.jpg",
+			"lrc": "assets/lrc/I'm Not Twenty.lrc"
+		},
+		{
+			"title": "英格玛 - 乌兰巴托的爸爸",
+			"url": "assets/audio/英格玛 - 乌兰巴托的爸爸.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "assets/images/8601a18b87d6277f05257e3d2a381f30e924fc84.jpg",
+			"lrc": "assets/lrc/乌托兰的爸爸.lrc"
 		}
 	]
 }

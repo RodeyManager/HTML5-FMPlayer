@@ -67,11 +67,12 @@ a:link{text-decoration: none; color: #555;}
 }
 .play-container .avatar > img{
     display: block;
-    width: 128px;
-    height: 128px;
-    margin: 0 auto;
+    width: 120px;
+    height: 120px;
+    margin: 5px auto;
     border:none;
     background-color: transparent;
+    border: solid 2px rgba(0,0,0, .2);
     border-radius: 50%;
     -o-border-radius: 50%;
     -ms-border-radius: 50%;
@@ -128,6 +129,44 @@ a:link{text-decoration: none; color: #555;}
     top: 0px;
     width: 0px;
 }
+.controller-con .player-bar-tip{
+    display: none;
+    background: #60F0D9;
+    position: absolute;
+    left: 0px;
+    top: -27px;
+    width: 50px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 5px;
+    color: #0A9282;
+    box-shadow: inset 0px 0px 1px 1px rgba(84, 209, 188,0.5);
+
+}
+.controller-con .player-bar-tip::after{
+    background: #60F0D9;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    width: 10px;
+    height: 10px;
+    content: "";
+    text-align: center;
+    font-size: 12px;
+    transform-origin: center center;
+    -webkit-transform-origin: 50% 50%;
+       -moz-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+         -o-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}
 
 .controller-con .btns{
     position: absolute;
@@ -139,7 +178,6 @@ a:link{text-decoration: none; color: #555;}
     display: inline-block;
     width: 50px;
     height: 50px;
-    /*background: #00EBDF;*/
     background: white;
     border-radius: 50%;
     margin: 0px 5px;
@@ -153,7 +191,7 @@ a:link{text-decoration: none; color: #555;}
 	
 }
 .controller-con .btns > i:hover{
-	background: #F0F0F0;
+	background: #E8E8E8;
 }
 .controller-con .btns > i.disabled{
     fill: rgb(0, 235, 223);

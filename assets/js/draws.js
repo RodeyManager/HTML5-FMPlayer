@@ -34,7 +34,7 @@
         }
         
         for (var i = 0; i < meterNum; i++) {
-            var value = array[i] * lineStep / 0.6 - ch / 50;
+            var value = array[i] * lineStep;
             var w = meterWidth;
             var h = value;
             var x = i * (meterWidth + 1);
@@ -66,17 +66,22 @@
         var h = Math.PI * 2;
         var x = cw / 2;// (cw - r * 2) / 2;
         var y = soundWave.canvas.height / 2 - 50;//(soundWave.canvas.height - r * 2) - r * 2;
+        var rr = 0;
         soundWave.clearRect(0, 0, cw, ch);
 		var index = 0;
         for (var i = 0; i < meterNum; i++) {
 			index += i;
+
+            //半径控制
+            var value = array[index] / cw * array[index] * lineStep;
 			if(cw > ch){
-				var value = array[index] / (cw / ch * 1000) * array[index] * lineStep;
+				value = array[index] / (cw / ch * 1000) * array[index] * lineStep;
 			}else{
-				var value = array[index] / (ch / cw * 1000) * array[index] * lineStep;
-			}
-            
-            var r = Math.round(value / 0.5) + 3;
+				value = array[index] / (ch / cw * 1000) * array[index] * lineStep;
+			} 
+            var r = rr = Math.round(value / 0.7) + 3;
+
+            //多色
 			if(isMoreColor){
 				var strokeColor = 'rgb('+ Math.round(Math.random()) * 200 + ',' + Math.round(Math.random()) * 200 + ',' + Math.round(Math.random()) * 200 +')';
 			}else{
@@ -90,15 +95,18 @@
             soundWave.stroke();
             soundWave.closePath();
 			
-			soundWave.beginPath();
-            soundWave.fillStyle = strokeColor; //'#F72A62';
-            soundWave.arc(x, y, r / 10, h, false);
-            soundWave.fill();
-            soundWave.closePath();
+			
             
         }
 
 		index++;
+
+        //画中间实心圆
+        soundWave.beginPath();
+        soundWave.fillStyle = strokeColor; //'#F72A62';
+        soundWave.arc(x, y, rr / 5, h, false);
+        soundWave.fill();
+        soundWave.closePath();
 
 	}
 	
@@ -116,17 +124,22 @@
         var h = Math.PI * 2;
         var x = cw / 2;// (cw - r * 2) / 2;
         var y = soundWave.canvas.height / 2 - 50;//(soundWave.canvas.height - r * 2) - r * 2;
+        var rr = 0;
         soundWave.clearRect(0, 0, cw, ch);
 		var index = 0;
         for (var i = 0; i < meterNum; i++) {
 			index += i;
+
+            //半径控制
+            var value = array[index] / cw * array[index] * lineStep;
             if(cw > ch){
-				var value = array[index] / (cw / ch * 1000) * array[index] * lineStep;
-			}else{
-				var value = array[index] / (ch / cw * 1000) * array[index] * lineStep;
-			}
-            
-            var r = Math.round(value / 0.5) + 3;
+                value = array[index] / (cw / ch * 1000) * array[index] * lineStep;
+            }else{
+                value = array[index] / (ch / cw * 1000) * array[index] * lineStep;
+            } 
+            var r = rr = Math.round(value / 0.7) + 3;
+
+            //多色
 			if(isMoreColor){
 				var strokeColor = 'rgb('+ Math.round(Math.random()) * 200 + ',' + Math.round(Math.random()) * 200 + ',' + Math.round(Math.random()) * 200 +')';
 			}else{
@@ -140,11 +153,11 @@
             soundWave.stroke();
             soundWave.closePath();
 			
-			soundWave.beginPath();
+			/*soundWave.beginPath();
             soundWave.fillStyle = strokeColor; //'#F72A62';
             soundWave.arc(x, y, r / 10, h, false);
             soundWave.fill();
-            soundWave.closePath();
+            soundWave.closePath();*/
 			
 			soundWave.beginPath();
             soundWave.fillStyle = strokeColor; //'#F72A62';
@@ -153,6 +166,13 @@
             soundWave.closePath();
             
         }
+
+        //画中间实心圆
+        soundWave.beginPath();
+        soundWave.fillStyle = strokeColor; //'#F72A62';
+        soundWave.arc(x, y, rr / 5, h, false);
+        soundWave.fill();
+        soundWave.closePath();
 
 		index++;
 
