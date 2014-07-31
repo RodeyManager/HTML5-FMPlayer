@@ -10,6 +10,7 @@
 <br >
 <p style="text-align:center;">
 	<img src="assets/images/view.png"  />
+	<img src="assets/images/view1.png"  />
 	<img src="assets/images/view2.png" />
 	<img src="assets/images/view3.png" />
 </p>
