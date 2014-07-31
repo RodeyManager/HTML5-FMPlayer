@@ -1,0 +1,13 @@
+{
+	"code": "200",
+	"song": [
+		{
+			"title": "筷子兄弟 - 小苹果",
+			"url": "assets/audio/筷子兄弟 - 小苹果.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "assets/images/v_106419746_m_601_m1_160_90.jpg",
+			"lrc": "assets/lrc/小苹果.lrc"
+		}
+	]
+}

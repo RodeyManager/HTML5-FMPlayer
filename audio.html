@@ -1,0 +1,27 @@
+	<audio id="audio" autoplay controls src=""></audio>
+
+
+
+	<script src="assets/js/zepto.min.js"></script>
+	<script >
+
+	$(window).ready(function(){
+		var context = new AudioContext();
+		var mp3 = 'http://nj.baidupcs.com/file/ced947a8808c7c53ca14d5a13c0da234?fid=4161218165-250528-117489720054135&time=1406698506&sign=FDTAXER-DCb740ccc5511e5e8fedcff06b081203-uJpnSA8Dye6g7xBzb5%2BfKgEE89U%3D&to=nb&fm=Nan,B,T,t&newver=1&newfm=1&flow_ver=3&expires=8h&rt=pr&r=314195456&mlogid=4053096663&vuk=4161218165&vbdid=2254755947&fn=Alizee%20-%20Moi%20Lolita.mp3';
+		var url = 'http://localhost:3000/search?musicURL=' + mp3;
+		$.ajax({
+			url: url,
+			type: 'get',
+			data: {},
+			dataType: 'html',
+			success: function(res){
+				console.log(res);
+				$('#audio').attr('src', 'temp/' + res);
+			},
+			error: function(e){
+				console.log(e)
+			}
+		});
+	});
+
+	</script>

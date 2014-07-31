@@ -1,0 +1,9 @@
+server/node_modeules/
+server/bin/
+*.exe
+*.zip
+*.rar
+*.tmp
+*.err
+*.TMP
+*.mp3

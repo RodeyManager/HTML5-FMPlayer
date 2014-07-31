@@ -1,0 +1,13 @@
+{
+	"code": "200",
+	"song": [
+		{
+			"title": "五月天 - 天使",
+			"url": "assets/audio/五月天 - 天使.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "assets/images/108041507.jpg",
+			"lrc": "assets/lrc/天使.lrc"
+		}
+	]
+}

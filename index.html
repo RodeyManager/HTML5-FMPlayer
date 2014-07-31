@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML5 - FM播放器</title>
+	<meta charset="utf-8" >
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale=1.0, user-scalable=no" >
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="format-detection" content="telphone=no">
+	<meta name="twcClient" content="false">
+	<link rel="stylesheet" href="assets/css/app.css">
+	<!-- <link rel="stylesheet" href="assets/css/sprites.css"> -->
+</head>
+<body>
+
+	<svg style="display:none;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="823" height="50" viewBox="0 0 823 50">
+		<defs>
+		<g id="icon-play">
+			<path class="path1" d="M25 0c-13.807 0-25 11.193-25 25s11.193 25 25 25 25-11.193 25-25-11.193-25-25-25zM25 45.313c-11.218 0-20.313-9.094-20.313-20.313s9.094-20.313 20.313-20.313 20.313 9.094 20.313 20.313-9.094 20.313-20.313 20.313zM18.75 14.063l18.75 10.938-18.75 10.938z"></path>
+		</g>
+		<g id="icon-stop">
+			<path class="path1" d="M25 0c-13.807 0-25 11.193-25 25s11.193 25 25 25 25-11.193 25-25-11.193-25-25-25zM25 45.313c-11.218 0-20.313-9.094-20.313-20.313s9.094-20.313 20.313-20.313 20.313 9.094 20.313 20.313-9.094 20.313-20.313 20.313zM15.625 15.625h18.75v18.75h-18.75z"></path>
+		</g>
+		<g id="icon-forward">
+			<path class="path1" d="M25 0c-13.807 0-25 11.193-25 25s11.193 25 25 25 25-11.193 25-25-11.193-25-25-25zM25 45.313c-11.218 0-20.313-9.094-20.313-20.313s9.094-20.313 20.313-20.313 20.313 9.094 20.313 20.313-9.094 20.313-20.313 20.313zM15.625 17.188l10.938 7.813-10.938 7.813zM28.125 17.188l10.938 7.813-10.938 7.813z"></path>
+		</g>
+
+		<g id="icon-volume-medium">
+			<path class="path1" d="M14.053 16.241c-0.24 0-0.48-0.092-0.663-0.275-0.366-0.366-0.366-0.96 0-1.326 2.559-2.559 2.559-6.722 0-9.281-0.366-0.366-0.366-0.96 0-1.326s0.96-0.366 1.326 0c1.594 1.594 2.471 3.712 2.471 5.966s-0.878 4.373-2.471 5.966c-0.183 0.183-0.423 0.275-0.663 0.275zM10.723 14.473c-0.24 0-0.48-0.092-0.663-0.275-0.366-0.366-0.366-0.96 0-1.326 1.584-1.584 1.584-4.161 0-5.745-0.366-0.366-0.366-0.96 0-1.326s0.96-0.366 1.326 0c2.315 2.315 2.315 6.082 0 8.397-0.183 0.183-0.423 0.275-0.663 0.275zM7.839 1.536c0.501-0.501 0.911-0.331 0.911 0.378v16.172c0 0.709-0.41 0.879-0.911 0.378l-4.714-4.713h-3.125v-7.5h3.125l4.714-4.714z" fill="#00ebdf"></path>
+		</g>
+		</defs>
+	</svg>
+<svg style="display:none;">
+	<g fill="#00ebdf">
+		<use xlink:href="#icon-play" transform="translate(0 0)"></use>
+		<use xlink:href="#icon-stop" transform="translate(110 0)"></use>
+		<use xlink:href="#icon-forward" transform="translate(220 0)"></use>
+		<use xlink:href="#icon-volume-high" transform="translate(770 0)"></use>
+	</g>
+</svg>
+
+	<!-- 舞台 -->
+	<canvas id="sound-wave" width="200" height="200"></canvas>
+
+	<!-- 控制台 -->
+	<div class="play-container" id="play-container">
+		<!-- 头像 -->
+		<div class="avatar" id="avatar">
+			<img src="assets/images/avatar.png" default="assets/images/avatar.png" onerror="this.src='assets/images/avatar.png'">
+		</div>
+		<!-- 控制中心 -->
+		<div class="controller-con" id="controller-con">
+			<!-- 歌曲名称 -->
+			<span class="song-name" id="song-name"></span>
+			<div class="player-bar" id="player-bar">
+				<i class="player-bar-masker" id="player-bar-masker"></i>
+				<div class="player-bar-tip" id="player-bar-tip">00:00</div>
+			</div>
+			<div class="btns">
+				<i class="svg-icon" id="play">
+					<svg><g id="player-icon"><use xlink:href="#icon-play"></use></g></svg>
+				</i>
+				<i class="svg-icon" id="next">
+					<svg><g fill="#00EBDF"><use xlink:href="#icon-forward"></use></g></svg>
+				</i>
+				<i class="svg-icon svg-volum" id="volum">
+					<svg><g fill="#00EBDF"><use xlink:href="#icon-volume-medium"></use></g></svg>
+				</i>
+			</div>
+			<div class="set-volum-con" id="set-volum-con" style="width:3px;height:50px;">
+				<input type="range" value="50" min="0" max="100" step="10" id="volum-range" class="volum-masker" >
+			  	<!-- <div class="volum-masker" id="volum-masker"></div>
+			  	<i id="volum-range"></i> -->
+			</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- 歌词 -->
+	<div class="musicLRC-con">
+		<div class="lrcs" id="musicLRC-con"></div>
+	</div>
+
+	<!-- 播放标签 -->
+	<div style="display:none;" id="video-con"></div>
+
+
+	<script src="assets/js/createjs-2013.12.12.min.js"></script>
+	<script src="assets/js/zepto.min.js"></script>
+	<script src="assets/js/touch.js"></script>
+	<script src="assets/js/HTML5AudioPlayer.js"></script>
+	<script src="assets/js/player.js"></script>
+	<script src="assets/js/draws.js"></script>
+</body>
+</html>

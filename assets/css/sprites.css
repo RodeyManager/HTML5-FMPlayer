@@ -1,0 +1,52 @@
+.icon {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	fill: currentColor;
+}
+.icon-play {
+	/*fill: #00ebdf;*/
+}
+.icon-pause {
+	/*fill: #00ebdf;*/
+}
+.icon-stop {
+	/*fill: #00ebdf;*/
+}
+.icon-backward {
+	/*fill: #00ebdf;*/
+}
+.icon-forward {
+	/*fill: #00ebdf;*/
+}
+.icon-play2 {
+	/*fill: #00ebdf;*/
+}
+.icon-pause2 {
+	/*fill: #00ebdf;*/
+}
+.icon-stop2 {
+	/*fill: #00ebdf;*/
+}
+.icon-backward2 {
+	/*fill: #00ebdf;*/
+}
+.icon-forward2 {
+	/*fill: #00ebdf;*/
+}
+.icon-first {
+	/*fill: #00ebdf;*/
+}
+.icon-last {
+	/*fill: #00ebdf;*/
+}
+.icon-previous {
+	/*fill: #00ebdf;*/
+}
+.icon-next {
+	/*fill: #00ebdf;*/
+}
+.icon-volume-high {
+	/*fill: #00ebdf;*/
+	width: 53px;
+}
