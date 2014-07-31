@@ -38,8 +38,8 @@ var gint = null;
 var gout = null;
 
 //播放控制
-var isPlay = true;
-var isNext = false;
+var isPlay = false;
+var isNext = true;
 var isMoreColor = false;
 var playerBarMaskerDom_w = 0;
 
@@ -115,11 +115,13 @@ $(document).ready(function(evt){
 	nextDom.on('click', function(evt){
 		evt.preventDefault();
 		evt.stopPropagation();
+		if(isPlay && !isNext){
+			stopSound();
+			isNext = true;
+		}
 		hamp && hamp.request.abort();
-		stopSound();
 		//播放一下首歌曲
-		playSound();
-
+		playSound();		
 	});
 
 	/**
@@ -138,11 +140,18 @@ $(document).ready(function(evt){
 
 		//加载音频
 		getSong(songsURL, null, function(res){
+			//如果当前正在处于加载状态则直接
+			if(!isNext) { return; }
+			isNext = false;
+
 			//随机获取歌曲
 			song = res.song[Math.floor(Math.random() * res.song.length)];
 			//song = res.song[3]; //调式用
+			
+			//设置标题和头像
 			songNameDom.html(song.title);
 			headImage.attr('src', song.image);
+
 			hamp = new HTML5AudioPlayer(song.url, 'sound-wave', function(buffer, analyser){
 				//开始播放
 				start(this, buffer);
@@ -183,7 +192,8 @@ $(document).ready(function(evt){
 		//
 		//开始播放 
 		hamp.play(currentTime, false);
-		isPlay = true;
+		isPlay = true; //表示已播放
+		isNext = false; //表示已加载完毕
 
 		//显示当前播放时间
 		showPlayBarTip();
@@ -202,11 +212,16 @@ $(document).ready(function(evt){
 	 */
 	function stopSound(){
 		//停止音频输出
-		if(isPlay && analyserObj)
-			hamp && hamp.stop();
+		//if(isPlay && analyserObj)
+		hamp && hamp.stop();
+
+		//情况数据源信息
+		audioBuffer = null;
+		analyserObj = null;
 
 		//重置不可用状态样式
 		isPlay = false;
+		isNext = true;
 		lrcDom.html('');
 		playDom.css('fill', '#00EBDF');
 		playDom.find('use').attr('xlink:href', '#icon-play');
@@ -329,10 +344,10 @@ $(document).ready(function(evt){
 			if(!sint){
 				return false;
 			}
-        	eff || drawCircle();
+        	//eff || drawCircle();
         	//drawMeter();
         	//drawPoint();
-			//drawCirclePoint();
+			drawCirclePoint();
         }, time || 10);
 	
 	}
