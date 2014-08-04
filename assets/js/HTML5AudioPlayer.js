@@ -26,22 +26,29 @@
 	'use strict';
 
 	var HTML5AudioPlayer = function(url, canvas, callback){
+		//音频地址
 		this.url = url;
 		this.canvas = canvas;
+		//音频标题
 		this.title = song.title;
+		//音频源
 		this.source = null;
+		//音频对象
 		this.audioContext = null;
-		this.forceStop = false;
+		//音频源格式化后的数据
 		this.buffer = null;
 		this.playing = false;
+		//加载完成后回调
 		this.callback = callback;
+		//音频源处理对象
 		this.analyser = null;
 		this.gainNode = null;
 		this.filter = null;
+		//加载xhr对象
 		this.request = null;
 
 		this.FADE_TIME = 1;
-
+		//定时器
 		this.sint = null;
 		this.sout = null;
 
@@ -55,6 +62,10 @@
 			this._start();
 		},
 
+		/**
+		 *  创建音频AudioContext对象
+		 * @return {[type]} [description]
+		 */
 		_fatchAPI: function(){
 			window.hasAudioContext = (window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.msAudioContext);
 			window.hasRequestAnimation = (window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.msRequestAnimationFrame);
@@ -66,6 +77,7 @@
 	        }
 		},
 
+		//获取或创建canvas对象
 		_start: function(){
 			var self = this,
 				url = this.url;
@@ -78,6 +90,7 @@
 			self._load(url);
 		},
 
+		//加载音频
 		_load: function(url){
 			var self = this;
 			var audioContext = this.audioContext;
@@ -117,6 +130,11 @@
         	}
 		},
 
+		/**
+		 * 创建音频源处理节点
+		 * @param  {[type]} buffer [description]
+		 * @return {[type]}        [description]
+		 */
 		createSource: function(buffer){
 			var self = this;
 			var audioContext = self.audioContext;
@@ -158,6 +176,10 @@
 			};
 		},
 
+		/**
+		 * 淡出效果处理
+		 * @return {[type]} [description]
+		 */
 		_malize: function(){
 			var self = this;
 			var duration = seld.source.duration;
@@ -232,6 +254,12 @@
 			//console.log(self.filter);
 		},
 
+		/**
+		 * 播放音频
+		 * @param  {[type]} currTime [description]
+		 * @param  {[type]} flag     [description]
+		 * @return {[type]}          [description]
+		 */
 		play: function(currTime, flag){
 			var self = this;
 			
@@ -248,6 +276,11 @@
 
 		},
 
+		/**
+		 * 停止播放
+		 * @param  {[type]} currTime [description]
+		 * @return {[type]}          [description]
+		 */
 		stop: function(currTime){
 			var self = this;
 			clearInterval(this.sint);
@@ -257,12 +290,13 @@
 	        };
         	self.source.stop(currTime || 0);
         	self.playing = false;
-	        /*self.source.onended = function() {
 
-	            console.log('loaded end!');
-	        };*/
 		},
 
+		/**
+		 * 设置音量
+		 * @param {[type]} size [description]
+		 */
 		setVolum: function(size){
 			var self = this;
 			//一旦设定完成之后，你就可以通过改变值之后来控制音量了。

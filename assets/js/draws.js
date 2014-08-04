@@ -12,13 +12,15 @@
 
 
 
+var effectsObject = {
+
 
 
     /**
 	 * 画矩阵
 	 * @return {[type]} [description]
 	 */
-	function drawMeter(){
+	drawMeter: function (){
 
 		var array = new Uint8Array(analyserObj.frequencyBinCount);
         analyserObj.getByteFrequencyData(array);
@@ -50,13 +52,13 @@
         }
 
         //requestAnimationFrame(drawMeter);
-	}
+	},
 
 	/**
 	 * 画圆
 	 * @return {[type]} [description]
 	 */
-	function drawCircle(){
+	drawCircle: function (){
 		var meterWidth = 20,
             meterNum = Math.floor(cw / meterWidth);
        
@@ -108,13 +110,13 @@
         soundWave.fill();
         soundWave.closePath();
 
-	}
+	},
 	
 	/**
 	 * 画圆和点
 	 * @return {[type]} [description]
 	 */
-	function drawCirclePoint(){
+	drawCirclePoint: function (){
 		var meterWidth = 20,
             meterNum = Math.floor(cw / meterWidth);
        
@@ -176,13 +178,13 @@
 
 		index++;
 
-	}
+	},
 	
 	/**
 	 * 画圆点
 	 * @return {[type]} [description]
 	 */
-	function drawPoint(){
+	drawPoint: function (){
 		var meterWidth = 20,
             meterNum = Math.floor(cw / meterWidth);
        
@@ -219,3 +221,6 @@
 
         
 	}
+
+
+};

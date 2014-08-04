@@ -57,7 +57,10 @@ var meterWidth = 2,
     meterNum = Math.floor(cw / meterWidth);
 
 //歌曲信息路径
-var songsURL = 'data/songs.json';
+var songsURL = 'data/wo_songs.json';
+
+//音波效果:  drawCircle || drawMeter || drawPoint || drawCirclePoint
+var eff = 'drawCirclePoint';
 
 //渲染完毕后执行
 $(document).ready(function(evt){
@@ -147,7 +150,7 @@ $(document).ready(function(evt){
 
 			//随机获取歌曲
 			song = res.song[Math.floor(Math.random() * res.song.length)];
-			//song = res.song[3]; //调式用
+			//song = res.song[6]; //调式用
 			
 			//设置标题和头像
 			songNameDom.html(song.title);
@@ -203,7 +206,7 @@ $(document).ready(function(evt){
 		playLRC();
 		
 		//播放音波效果 eff = //drawMeter() || drawPoint() || drawCirclePoint();
-        playAnalyser(null, 10);
+        playAnalyser(eff, 10);
 	
 	}
 
@@ -345,10 +348,7 @@ $(document).ready(function(evt){
 			if(!sint){
 				return false;
 			}
-        	//eff || drawCircle();
-        	//drawMeter();
-        	//drawPoint();
-			drawCirclePoint();
+			(window.effectsObject && window.effectsObject[eff]) && window.effectsObject[eff]();
         }, time || 10);
 	
 	}
@@ -496,11 +496,23 @@ $(document).ready(function(evt){
 	 */
 	function getLrcTime(str){
 		if('' == str || !str) return 0;
-		var ma = str.match(/(\d{2}:\d{2}.\d{2})/gi);
+		var ma = str.match(/(\d{2}:\d{2}.*\d{0,2})/gi);
 		ma = ma[ma.length - 1].replace(/\[*\]*/gi, '');
-		ma = ma.split(/[:|\.]+/gi);
-		return parseInt(ma[0]) * 60 * 1000 + parseInt(ma[1]) * 60 + parseInt(ma[2]);
-	
+		var times = 0;
+		if(ma.length){			
+			ma = ma.split(/[:|\.]+/gi);
+			if(ma[0]){
+				times = parseInt(ma[0]) * 60 * 1000;
+			}
+			if(ma[1]){
+				times +=  + parseInt(ma[1]) * 60;
+			}
+			if(ma[2]){
+				times += parseInt(ma[2]);
+			}
+		}
+
+		return times;
 	}
 
 	/**
@@ -513,52 +525,76 @@ $(document).ready(function(evt){
 		var gcs = [];
 		var arrs = [];
 		var ma = lrc.split(/[\n\r\t]+/gi);
-		for(var i = 0; i < ma.length; i++){
-			if('' == ma[i]) continue;
-			var t = ma[i].match(/\d{2}:\d{2}.\d{2}/gi);
-			var g = '';
-			if(t){
-				var l = t.length;
-				//console.log(t)
-				//歌词中有可能是这样的写法：
-				// 	倒序-->：[03:30.17][03:00.86][02:20.86][01:02.02]你就像天使一样
-				//	正序-->：[01:02.02][02:20.86][03:00.86][03:30.17]你就像天使一样
-				//如果时间是倒序的，则迭代处理
-				//如果时间是正序的，则递增处理
-				//这种方法兼容每一行前面只有一个时间表 
-				/**
-				 *
-				 * 这里已经注释掉了排序的判断，因为后面直接对数组中
-				 * 的每一个元素对象的id值进行排序。
-				 * （此处将时间作为数据元素对象的id值）
-				 * 	gcs.push({ 'id': time, 'gc': g});
-					times.push({ 'id': time, 'time': time});
-				 * 
-				 */
-				
-				//if(getLrcTime(t[0]) > getLrcTime(t[l -1])){
-				
-					for(var j = l - 1; j >= 0; --j){
-						g = ma[i].replace(/(\[\d{2}:\d{2}.\d{2}\]\s*)*/gi, '');
-						var ms = t[j].split(/[:|\.]+/gi);
-						var time = Math.round( (parseInt(ms[0]) * 60) + parseInt(ms[1]) + (parseInt(ms[2]) / 1000) );
-						gcs.push({ 'id': time, 'gc': g});
+		var ti = '';
+		var ar = '';
+		var al = '';
+
+		if(ma.length){
+
+			for(var i = 0; i < ma.length; i++){
+				if('' == ma[i]) continue;
+				var t = ma[i].match(/\d{2}:\d{2}.\d{2}/gi);
+				var g = '';
+				if(t){
+					var l = t.length;
+					//console.log(t)
+					//歌词中有可能是这样的写法：
+					// 	倒序-->：[03:30.17][03:00.86][02:20.86][01:02.02]你就像天使一样
+					//	正序-->：[01:02.02][02:20.86][03:00.86][03:30.17]你就像天使一样
+					//如果时间是倒序的，则迭代处理
+					//如果时间是正序的，则递增处理
+					//这种方法兼容每一行前面只有一个时间表 
+					/**
+					 *
+					 * 这里已经注释掉了排序的判断，因为后面直接对数组中
+					 * 的每一个元素对象的id值进行排序。
+					 * （此处将时间作为数据元素对象的id值）
+					 * 	gcs.push({ 'id': time, 'gc': g});
 						times.push({ 'id': time, 'time': time});
-						//console.log(t[j])
-					}
-				// }else{
-				// 	for(var j = 0; j < l; ++j){
-				// 		g = ma[i].replace(/(\[\d{2}:\d{2}.\d{2}\]\s*)*/gi, '');
-				// 		var ms = t[j].split(/[:|\.]+/gi);
-				// 		var time = Math.round( (parseInt(ms[0]) * 60) + parseInt(ms[1]) + (parseInt(ms[2]) / 1000) );
-				// 		gcs.push({ 'id': time, 'gc': g});
-				// 		times.push({ 'id': time, 'time': time});
-				// 	}
-				// }
-			}	
+					 * 
+					 */
+					
+					//if(getLrcTime(t[0]) > getLrcTime(t[l -1])){
+					
+						for(var j = l - 1; j >= 0; --j){
+							g = ma[i].replace(/(\[\d{2}:\d{2}.\d{2}\]\s*)*/gi, '');
+							var ms = t[j].split(/[:|\.]+/gi);
+							var time = Math.round( (parseInt(ms[0]) * 60) + parseInt(ms[1]) + (parseInt(ms[2]) / 1000) );
+							gcs.push({ 'id': time, 'gc': g});
+							times.push({ 'id': time, 'time': time});
+							//console.log(t[j])
+						}
+					// }else{
+					// 	for(var j = 0; j < l; ++j){
+					// 		g = ma[i].replace(/(\[\d{2}:\d{2}.\d{2}\]\s*)*/gi, '');
+					// 		var ms = t[j].split(/[:|\.]+/gi);
+					// 		var time = Math.round( (parseInt(ms[0]) * 60) + parseInt(ms[1]) + (parseInt(ms[2]) / 1000) );
+					// 		gcs.push({ 'id': time, 'gc': g});
+					// 		times.push({ 'id': time, 'time': time});
+					// 	}
+					// }
+				}
+
+				//截取标题 作者等相关 
+				if(ma[i].match(/^\[ti:([\.\s\S])*\]$/gi)){
+					ti = (ma[i].match(/^\[ti:([\.\s\S])*\]$/gi))[0];
+					ti = ti.replace(/(\[|\]|ti:)*/gi, '');
+				}
+				if(ma[i].match(/^\[ar:([\.\s\S])*\]$/gi)){
+					ar = (ma[i].match(/^\[ar:([\.\s\S])*\]$/gi))[0];
+					ar = ar.replace(/(\[|\]|ar:)*/gi, '');
+				}
+				if(ma[i].match(/^\[al:([\.\s\S])*\]$/gi)){
+					al = (ma[i].match(/^\[al:([\.\s\S])*\]$/gi))[0];
+					al = al.replace(/(\[|\]|al:)*/gi, '');
+				}	
+			}
+
 		}
-		//console.log({ times: times, gcs: gcs})
-		return { times: times, gcs: gcs};
+
+
+		//console.log({ times: times, gcs: gcs, ti: ti, ar: ar, al: al})
+		return { times: times, gcs: gcs, ti: ti, ar: ar, al: al};
 	
 	}
 	
@@ -582,9 +618,16 @@ $(document).ready(function(evt){
 			return a.id - b.id;
 		});
 
-		/*console.log(times)
-		console.log(gcs)
-		return;*/
+		//歌词头信息相关
+		if(lrcObj.ti != ''){
+			html.push('<p data-time="0">'+ lrcObj.ti +'</p>');
+		}
+		if(lrcObj.ar != ''){
+			html.push('<p data-time="3">'+ lrcObj.ar +'</p>');
+		}
+		if(lrcObj.al != ''){
+			html.push('<p data-time="6">'+ lrcObj.al +'</p>');
+		}
 
 		//创建歌词显示元素
 		for(; i < l; ++i){

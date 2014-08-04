@@ -32,6 +32,46 @@
 			"duration": "4.10",
 			"image": "assets/images/8601a18b87d6277f05257e3d2a381f30e924fc84.jpg",
 			"lrc": "assets/lrc/乌托兰的爸爸.lrc"
+		},
+		{
+			"title": "群星 - 你不是真正的快乐(特别版)",
+			"url": "assets/audio/群星 - 你不是真正的快乐(特别版).mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "assets/images/b03533fa828ba61e757f2fd44334970a314e59bc.jpg",
+			"lrc": "assets/lrc/你不是真正的快乐.lrc"
+		},
+		{
+			"title": "张国荣 - 暴风一族",
+			"url": "assets/audio/张国荣 - 暴风一族.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "assets/images/37d3d539b6003af32a5da365372ac65c1138b6cb.jpg",
+			"lrc": "assets/lrc/暴风一族.lrc"
+		},
+		{
+			"title": "梅艳芳 - 孤身走我路 - 演唱会版",
+			"url": "assets/audio/梅艳芳 - 孤身走我路 - 演唱会版.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "assets/images/d4628535e5dde711a29e23f3a5efce1b9d166162.jpg",
+			"lrc": "assets/lrc/孤身走我路.lrc"
+		},
+		{
+			"title": "陈慧娴 - 归来吧(粤语)",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/MP3_40_16_Stero/2011042702/101900.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "http://a.10155.com/picture/91789000/copyright/singer/2013032806/100/660094.jpg?time=1407136629157",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/MP3_40_16_Stero/2011042702/101900.lrc"
+		},
+		{
+			"title": "Beyond - 真的爱你(粤语)",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/MP3_40_16_Stero/2011042701/101557.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "http://a.10155.com/picture/90205000/copyright/singer/20090514/100/440001.jpg?time=1407136859513",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/MP3_40_16_Stero/2011042701/101557.lrc"
 		}
 	]
 }

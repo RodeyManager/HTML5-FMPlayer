@@ -1,0 +1,85 @@
+{
+	"code": "200",
+	"song": [
+		{
+			"title": "陈慧娴 - 归来吧(粤语)",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/MP3_40_16_Stero/2011042702/101900.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "http://a.10155.com/picture/91789000/copyright/singer/2013032806/100/660094.jpg?time=1407136629157",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/MP3_40_16_Stero/2011042702/101900.lrc"
+		},
+		{
+			"title": "Beyond - 真的爱你(粤语)",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/MP3_40_16_Stero/2011042701/101557.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "http://a.10155.com/picture/90205000/copyright/singer/20090514/100/440001.jpg?time=1407136859513",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/MP3_40_16_Stero/2011042701/101557.lrc"
+		},
+		{
+			"title": "达明一派 - 石头记(粤语)",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/MP3_40_16_Stero/20110601/100041.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "http://a.10155.com/picture/90195000/copyright/singer/20090509/100/damingyipai00.jpg?time=1407136998185",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/MP3_40_16_Stero/20110601/100041.lrc"
+		},
+		{
+			"title": "Beyond - 灰色轨迹(粤语)",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/MP3_40_16_Stero/2011042701/101472.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "http://a.10155.com/picture/90205000/copyright/singer/20090514/100/440001.jpg?time=1407137070705",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/MP3_40_16_Stero/2011042701/101472.lrc"
+		},
+		{
+			"title": "牛奶咖啡 - 明天,你好",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/MP3_40_16_Stero/2011081808/880004.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "http://a.10155.com/picture/90163000/copyright/singer/2010061213/100/130053.jpg?time=1407137188369",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/MP3_40_16_Stero/2011081808/880004.lrc"
+		},
+		{
+			"title": "陈百强 - 等(粤语)",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/MP3_40_16_Stero/2011042702/102504.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "http://a.10155.com/picture/91789000/copyright/singer/2013032806/100/660089.jpg?time=1407137424614",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/MP3_40_16_Stero/2011042702/102504.lrc"
+		},
+		{
+			"title": "陈百强 - 念亲恩(粤语)",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/MP3_40_16_Stero/2011042702/102486.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "http://a.10155.com/picture/91789000/copyright/singer/2013032806/100/660089.jpg?time=1407137424614",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/MP3_40_16_Stero/2011042702/102486.lrc"
+		},
+		{
+			"title": "Adele - Dont You Remember",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/20121222070b/M0380777003.Mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "http://a.10155.com/picture/91789000/copyright/singer/2013032806/100/660005.jpg?time=1407137720542",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/20121222070b/M0380777003.Lrc"
+		},
+		{
+			"title": "李宗盛 - 领悟(理性与感性演唱会版)",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/MP3_40_16_mono/2013031103/783142.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "http://a.10155.com/picture/91789000/copyright/singer/2013032806/100/660179.jpg?time=1407137987567",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/MP3_40_16_mono/2013031103/783142.lrc"
+		},
+		{
+			"title": "刘欢 - 凤凰于飞",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/MP3_40_16_mono/2012042407/770003.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "http://a.10155.com/picture/91789000/copyright/singer/2013032806/100/660195.jpg?time=1407138208728",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/MP3_40_16_mono/2012042407/770003.lrc"
+		}
+	]
+}
