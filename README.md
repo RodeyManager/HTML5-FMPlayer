@@ -3,7 +3,7 @@
 	学习 Web Audio Api<br>
 	音乐为本地文件，网络寻找了好久没有音乐接口，读取网络音乐都被禁止访问<br>
 	在 <pre>assets/js/draws.js</pre>中存放的是根据音波画图函数集合，可以自己添加函数，
-	添加完后在要<pre>assets/js/player.js</pre>的<pre>playAnalyser()</pre>方法中调用
+	添加完后直接对 eff 赋值就可以了
 </p>
 <br >
 <br >
