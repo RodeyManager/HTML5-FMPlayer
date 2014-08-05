@@ -18,14 +18,6 @@
 			"lrc": "http://a.10155.com/90115000/fulltrack_dl/MP3_40_16_Stero/2011042701/101557.lrc"
 		},
 		{
-			"title": "达明一派 - 石头记(粤语)",
-			"url": "http://a.10155.com/90115000/fulltrack_dl/MP3_40_16_Stero/20110601/100041.mp3",
-			"ext": "mp3",
-			"duration": "4.10",
-			"image": "http://a.10155.com/picture/90195000/copyright/singer/20090509/100/damingyipai00.jpg?time=1407136998185",
-			"lrc": "http://a.10155.com/90115000/fulltrack_dl/MP3_40_16_Stero/20110601/100041.lrc"
-		},
-		{
 			"title": "Beyond - 灰色轨迹(粤语)",
 			"url": "http://a.10155.com/90115000/fulltrack_dl/MP3_40_16_Stero/2011042701/101472.mp3",
 			"ext": "mp3",
@@ -80,6 +72,262 @@
 			"duration": "4.10",
 			"image": "http://a.10155.com/picture/91789000/copyright/singer/2013032806/100/660195.jpg?time=1407138208728",
 			"lrc": "http://a.10155.com/90115000/fulltrack_dl/MP3_40_16_mono/2012042407/770003.lrc"
+		},
+		{
+			"title": "周杰伦 - 半岛铁盒",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/MP3_40_16_mono/2011120801/660023.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "http://a.10155.com/picture/91789000/copyright/singer/2013032806/100/660343.jpg?time=1407202080995",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/MP3_40_16_mono/2011120801/660023.lrc"
+		},
+		{
+			"title": "Enigma - Goodby",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/20121231030g/M0184014001.Mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "assets/images/Enigma.jpg",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/20121231030g/default.lrc"
+		},
+		{
+			"title": "Enigma - Age Of Loneliness",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170052/M0022413007.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "assets/images/Enigma.jpg",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170052/M0022413007.lrc"
+		},
+		{
+			"title": "Enigma - Return To Innocence",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170043/M0047744009.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "assets/images/Enigma.jpg",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170043/default.lrc"
+		},
+		{
+			"title": "Enigma - Second Chapter",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170058/M0182607001.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "assets/images/Enigma.jpg",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170043/default.lrc"
+		},
+		{
+			"title": "Enigma - Endless Quest",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201308190004/1523982.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "assets/images/Enigma.jpg",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170043/default.lrc"
+		},
+		{
+			"title": "Enigma - Page Of Cups",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201308190004/1753819.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "assets/images/Enigma.jpg",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170043/default.lrc"
+		},
+		{
+			"title": "Enigma - Principles Of Lust(095 Bpm)(Everlasting Lust Mix)",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170058/M0181671007.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "assets/images/Enigma.jpg",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170043/default.lrc"
+		},
+		{
+			"title": "Enigma - Almost Full Moon",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170058/M0177800009.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "assets/images/Enigma.jpg",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170043/default.lrc"
+		},
+		{
+			"title": "Enigma - Beyond The Invisible",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170058/M0177800004.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "assets/images/Enigma.jpg",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170043/default.lrc"
+		},
+		{
+			"title": "Enigma - I Love You...Ill Kill You",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170058/M0182607004.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "assets/images/Enigma.jpg",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170043/default.lrc"
+		},
+		{
+			"title": "Enigma - Silent Warrior",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170058/M0182607005.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "assets/images/Enigma.jpg",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170043/default.lrc"
+		},
+		{
+			"title": "Enigma - Boum-Boum(Radio Edit)",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170060/M0192494005.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "assets/images/Enigma.jpg",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170043/default.lrc"
+		},
+		{
+			"title": "Enigma - Silence Must Be Heard",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170061/M0197764008.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "assets/images/Enigma.jpg",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170043/default.lrc"
+		},
+		{
+			"title": "Enigma - Voyageur",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170060/M0192494002.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "assets/images/Enigma.jpg",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170043/default.lrc"
+		},
+		{
+			"title": "Enigma - Following The Sun(专辑版)",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170060/M0192494011.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "assets/images/Enigma.jpg",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170043/default.lrc"
+		},
+		{
+			"title": "Enigma - Out From The Deep",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170058/M0182607008.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "assets/images/Enigma.jpg",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170043/default.lrc"
+		},
+		{
+			"title": "Enigma - Back To The Rivers Of Belief-Ii-Hallelujah",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201308190009/1219140.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "assets/images/Enigma.jpg",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170043/default.lrc"
+		},
+		{
+			"title": "Enigma - Back To The Rivers Of Belief-I-Way To Eternity",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201308190009/1219139.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "assets/images/Enigma.jpg",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170043/default.lrc"
+		},
+		{
+			"title": "Enigma - Sitting On The Moon",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201308190004/2011440.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "assets/images/Enigma.jpg",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170043/default.lrc"
+		},
+		{
+			"title": "Enigma - The Eyes Of Truth",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170058/M0182607002.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "assets/images/Enigma.jpg",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170043/default.lrc"
+		},
+		{
+			"title": "Alize - Hey Amigo",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170029/M0010059005.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "http://d.hiphotos.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=898c6de0f2d3572c72ef948eeb7a0842/fcfaaf51f3deb48f0f099bd7f01f3a292df57852.jpg",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170029/M0010059005.lrc"
+		},
+		{
+			"title": "Alize - LE Mail A Des Ailes",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170029/M0010059008.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "http://a.10155.com/picture/92306000/copyright/singer/201306170029/100/singer27185.jpg?time=1407204686194",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170029/M0010059008.lrc"
+		},
+		{
+			"title": "Alize - Amelie MA Dit",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170029/M0010059002.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "http://a.10155.com/picture/92306000/copyright/singer/201306170029/100/singer27185.jpg?time=1407204686194",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170029/M0010059002.lrc"
+		},
+		{
+			"title": "Alize - Moi...Lolita",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201308190010/1918448.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "http://a.10155.com/picture/92306000/copyright/singer/201306170029/100/singer27185.jpg?time=1407204686194",
+			"lrc": "assets/lrc/Moi Lolita2.lrc"
+		},
+		{
+			"title": "Alize - A Contre-Courant",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170029/M0010059001.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "http://a.10155.com/picture/92306000/copyright/singer/201306170029/100/singer27185.jpg?time=1407204686194",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170029/M0010059001.lrc"
+		},
+		{
+			"title": "Alize - JEn Ai Marre",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170029/M0010059007.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "http://a.10155.com/picture/92306000/copyright/singer/201306170029/100/singer27185.jpg?time=1407204686194",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170029/M0010059007.lrc"
+		},
+		{
+			"title": "Alize - JAi Pas Vingt Ans",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170029/M0010059006.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "http://a.10155.com/picture/92306000/copyright/singer/201306170029/100/singer27185.jpg?time=1407204686194",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170029/M0010059006.lrc"
+		},
+		{
+			"title": "Alize - Abracadabra",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201308190010/1595759.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "http://a.10155.com/picture/92306000/copyright/singer/201306170029/100/singer27185.jpg?time=1407204686194",
+			"lrc": "assets/lrc/Abracadabra.lrc"
+		},
+		{
+			"title": "Hotel California (加州旅馆)",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201306170001/M0032062004.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "http://a.10155.com/picture/90181000/copyright/singer/20090525/100/qunxing00.jpg?time=1407205113496",
+			"lrc": "assets/lrc/hotel california (加州旅馆).lrc"
+		},
+		{
+			"title": "Christina Aguilera - Hurt",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/MP3_40_16_Stero/2011081604/102597.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "http://t11.baidu.com/it/u=3956844910,2532798504&fm=58",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/MP3_40_16_Stero/2011081604/102597.lrc"
+		},
+		{
+			"title": "Conquest Of Paradise (征服天堂)",
+			"url": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201308190013/1481187.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "assets/images/37d3d539b6003af3633fea49352ac65c1038b615.jpg",
+			"lrc": "http://a.10155.com/90115000/fulltrack_dl/91892000/MP3_40_16_Stero/201308190013/default.lrc"
 		}
 	]
 }

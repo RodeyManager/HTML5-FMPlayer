@@ -220,7 +220,131 @@ var effectsObject = {
         index++;
 
         
-	}
+	},
+
+    /**
+     * 画点和线
+     * @return {[type]} [description]
+     */
+    drawBazire: function(){
+        var meterWidth = 20,
+            meterNum = Math.floor(cw / meterWidth);
+       
+        var array = new Uint8Array(analyserObj.frequencyBinCount);
+        analyserObj.getByteFrequencyData(array);
+
+        var h = Math.PI * 2;
+        soundWave.clearRect(0, 0, cw, ch);
+        var canw = cw,
+            canh = soundWave.canvas.height;
+        //画点
+        var index = 0;
+        var len = array[Math.floor(Math.random() * array.length)]  * array[Math.floor(Math.random() * array.length)] / 3 ;
+        for (var i = 0; i < len; i++) {
+            index += i;
+            var value = array[index] / ch * array[index];
+            var r = Math.round(value / 10);
+            var x = Math.random() * cw;
+            //var y = Math.random() * (canh * .5) + canh / 4;
+            var y = canh / 3 + (array[Math.floor(Math.random() * array.length)]);
+
+            var fillColor = '#F72A62';
+
+            if(isMoreColor){
+                fillColor = 'rgba('+ Math.round(Math.random()) * 200 + ',' + Math.round(Math.random()) * 200 + ',' + Math.round(Math.random()) * 200 +', .8)';
+            }
+
+            soundWave.beginPath();
+            soundWave.fillStyle = fillColor; //'#F72A62';
+            soundWave.arc(x, y, r, h, false);
+            soundWave.fill();
+            soundWave.closePath();
+        }
+        index++;
+        //画线
+        var deg = Math.PI / 180;
+        var m = Math.random() * array[Math.floor(Math.random() * array.length)] / 3;
+        for(var i = 0; i < m; ++i){
+
+            soundWave.beginPath();
+            soundWave.strokeStyle = 'rgba(247, 42, 98, '+ Math.random() +')';
+            soundWave.lineWidth = 1;   
+            soundWave.moveTo(0, canh / 3 + (array[Math.floor(Math.random() * array.length)] / 1.2));
+            soundWave.lineTo(canw, canh / 3 + (array[Math.floor(Math.random() * array.length)] / 1.2));
+            soundWave.stroke();
+            soundWave.closePath();
+        }
+
+        //soundWave.rotate(-180 * deg);
+        $('#sound-wave').css({
+            '-webkit-transform': 'rotateX(-180deg)',
+            '-moz-transform': 'rotateX(-180deg)',
+            '-ms-transform': 'rotateX(-180deg)',
+            '-o-transform': 'rotateX(-180deg)',
+            'transform': 'rotateX(-180deg)'
+        });
+
+    },
+
+
+    drawMeterStreamgraph: function(){
+        var meterWidth = 1,
+            meterNum = Math.floor(cw / meterWidth)
+        var array = new Uint8Array(analyserObj.frequencyBinCount);
+        analyserObj.getByteFrequencyData(array);
+       
+        soundWave.clearRect(0, 0, cw, ch);
+
+        var m = array[Math.floor(Math.random() * array.length)];
+        for (var i = 0; i < m; ++i) {
+            var value = array[i] * lineStep;
+            var w = meterWidth;
+            var h = value;
+            var x = cw / 2 + Math.abs(Math.sin(h / i * 5) * 270) + 5; //i * (meterWidth + 1);
+            var y = Math.cos(h / i * 5) * -120 + ch / 4;
+
+            soundWave.fillStyle = 'rgba(247, 42, 98, '+ Math.random() +')';
+            soundWave.fillRect(x, y, meterWidth, h / 2.5);
+            
+            if(h > 0){
+                soundWave.beginPath();
+                soundWave.arc(x + 1, y - 5, .5, Math.PI * 2, false);
+                soundWave.fill();
+                soundWave.closePath();
+
+                soundWave.beginPath();
+                soundWave.arc(x + 1, h + Math.abs(y) - 5, 1, Math.PI * 2, false);
+                soundWave.fill();
+                soundWave.closePath();
+            }
+        }
+        
+        for (var i = m + 1; i >= 0; --i) {
+            var value = array[i] * lineStep;
+            var w = meterWidth;
+            var h = value;
+            var x = cw / 2 - Math.sin(h / i * 5) * 270 + 5; //i * (meterWidth + 1);
+            var y = Math.cos(h / i * 5) * -120 + ch / 4;
+
+            soundWave.fillStyle = 'rgba(247, 42, 98, '+ Math.random() +')';
+            soundWave.fillRect(x, y, meterWidth, h / 2.5);
+            
+            if(h > 0){
+                soundWave.beginPath();
+                soundWave.arc(x + 1, y - 5, .5, Math.PI * 2, false);
+                soundWave.fill();
+                soundWave.closePath();
+
+                soundWave.beginPath();
+                soundWave.arc(x + 1, h + Math.abs(y) - 5, 1, Math.PI * 2, false);
+                soundWave.fill();
+                soundWave.closePath();
+            }
+        }
+
+    }
+
+
 
 
 };

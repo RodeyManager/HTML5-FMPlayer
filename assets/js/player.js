@@ -59,8 +59,9 @@ var meterWidth = 2,
 //歌曲信息路径
 var songsURL = 'data/wo_songs.json';
 
-//音波效果:  drawCircle || drawMeter || drawPoint || drawCirclePoint
-var eff = 'drawCirclePoint';
+//音波效果:  drawCircle || drawMeter || drawPoint || drawCirclePoint || 
+//			 drawBazire || drawMeterStreamgraph
+var eff = 'drawMeterStreamgraph';
 
 //渲染完毕后执行
 $(document).ready(function(evt){
@@ -150,7 +151,7 @@ $(document).ready(function(evt){
 
 			//随机获取歌曲
 			song = res.song[Math.floor(Math.random() * res.song.length)];
-			//song = res.song[6]; //调式用
+			//song = res.song[33]; //调式用
 			
 			//设置标题和头像
 			songNameDom.html(song.title);
@@ -205,8 +206,8 @@ $(document).ready(function(evt){
     	//播放歌词
 		playLRC();
 		
-		//播放音波效果 eff = //drawMeter() || drawPoint() || drawCirclePoint();
-        playAnalyser(eff, 10);
+		//播放音波效果
+        playAnalyser(eff, 1);
 	
 	}
 

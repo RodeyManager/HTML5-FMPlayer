@@ -8,9 +8,28 @@
 <br >
 <br >
 <br >
+<p> drawCircle： </p>
 <p style="text-align:center;">
 	<img src="assets/images/view.png"  />
+</p>
+<p> drawCirclePoint： </p>
+<p style="text-align:center;">
 	<img src="assets/images/view1.png"  />
+</p>
+<p> drawMeter： </p>
+<p style="text-align:center;">	
 	<img src="assets/images/view2.png" />
+</p>
+<p> drawPoint： </p>
+<p style="text-align:center;">	
 	<img src="assets/images/view3.png" />
 </p>
+<p> drawBazire： </p>
+<p style="text-align:center;">	
+	<img src="assets/images/view4.png" />
+</p>
+<p> drawMeterStreamgraph： </p>
+<p style="text-align:center;">	
+	<img src="assets/images/view5.png" />
+</p>	
+
