@@ -42,6 +42,10 @@ var isPlay = false;
 var isNext = true;
 var isMoreColor = false;
 var playerBarMaskerDom_w = 0;
+//填充色
+var fillColor = '#F72A62'; 
+//轮廓色
+var strokeColor = '#F72A62'; 
 
 //音量相关
 var currentVolum = 80;
@@ -61,7 +65,7 @@ var songsURL = 'data/wo_songs.json';
 
 //音波效果:  drawCircle || drawMeter || drawPoint || drawCirclePoint || 
 //			 drawBazire || drawMeterStreamgraph
-var eff = 'drawMeterStreamgraph';
+var eff = 'drawMeter';
 
 //渲染完毕后执行
 $(document).ready(function(evt){
