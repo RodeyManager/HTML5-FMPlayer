@@ -65,7 +65,7 @@ var songsURL = 'data/wo_songs.json';
 
 //音波效果:  drawCircle || drawMeter || drawPoint || drawCirclePoint || 
 //			 drawBazire || drawMeterStreamgraph
-var eff = 'drawMeter';
+var eff = 'drawBazire';
 
 //渲染完毕后执行
 $(document).ready(function(evt){
@@ -154,8 +154,8 @@ $(document).ready(function(evt){
 		getSong(songsURL, null, function(res){
 
 			//随机获取歌曲
-			song = res.song[Math.floor(Math.random() * res.song.length)];
-			//song = res.song[33]; //调式用
+			//song = res.song[Math.floor(Math.random() * res.song.length)];
+			song = res.song[33]; //调式用
 			
 			//设置标题和头像
 			songNameDom.html(song.title);

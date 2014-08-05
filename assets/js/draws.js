@@ -26,7 +26,7 @@ var effectsObject = {
         analyserObj.getByteFrequencyData(array);
         var step = Math.floor(array.length / meterNum);
         soundWave.clearRect(0, 0, cw, ch);
-        soundWave.fillStyle = fillColor;
+        soundWave.fillStyle = fillColor || '#F72A62';
         if(isMoreColor){
         	gradient = soundWave.createLinearGradient(0, 0, 0, 500);
 	        gradient.addColorStop(1, 'rgba(230, 28, 78, .3)');
@@ -69,6 +69,7 @@ var effectsObject = {
         var x = cw / 2;// (cw - r * 2) / 2;
         var y = soundWave.canvas.height / 2 - 50;//(soundWave.canvas.height - r * 2) - r * 2;
         var rr = 0;
+        var strokeColor = strokeColor || '#F72A62';
         soundWave.clearRect(0, 0, cw, ch);
 		var index = 0;
         for (var i = 0; i < meterNum; i++) {
@@ -82,7 +83,6 @@ var effectsObject = {
 				value = array[index] / (ch / cw * 1000) * array[index] * lineStep;
 			} 
             var r = rr = Math.round(value / 0.7) + 3;
-            var strokeColor = strokeColor;
 
             //多色
 			if(isMoreColor){
@@ -90,7 +90,7 @@ var effectsObject = {
 			}
             
         	soundWave.beginPath();
-            soundWave.strokeStyle = strokeColor; //'#F72A62';
+            soundWave.strokeStyle = strokeColor; 
             soundWave.lineWidth = 2;
             soundWave.arc(x, y, r, h, false);
             soundWave.stroke();
@@ -123,6 +123,7 @@ var effectsObject = {
         var x = cw / 2;// (cw - r * 2) / 2;
         var y = soundWave.canvas.height / 2 - 50;//(soundWave.canvas.height - r * 2) - r * 2;
         var rr = 0;
+        var strokeColor = strokeColor || '#F72A62';
         soundWave.clearRect(0, 0, cw, ch);
 		var index = 0;
         for (var i = 0; i < meterNum; i++) {
@@ -136,15 +137,14 @@ var effectsObject = {
                 value = array[index] / (ch / cw * 1000) * array[index] * lineStep;
             } 
             var r = rr = Math.round(value / 0.7) + 3;
-
-            var strokeColor = strokeColor;
+            
             //多色
 			if(isMoreColor){
 				strokeColor = 'rgb('+ Math.round(Math.random()) * 200 + ',' + Math.round(Math.random()) * 200 + ',' + Math.round(Math.random()) * 200 +')';
 			}
             
         	soundWave.beginPath();
-            soundWave.strokeStyle = strokeColor; //'#F72A62';
+            soundWave.strokeStyle = strokeColor; 
             soundWave.lineWidth = 2;
             soundWave.arc(x, y, r, h, false);
             soundWave.stroke();
@@ -187,6 +187,7 @@ var effectsObject = {
         analyserObj.getByteFrequencyData(array);
 
         var h = Math.PI * 2;
+        var fillColor = fillColor || '#F72A62';
         soundWave.clearRect(0, 0, cw, ch);
         var index = 0;
         var len = array[Math.floor(Math.random() * array.length)]  * array[Math.floor(Math.random() * array.length)] / 3 ;
@@ -196,8 +197,6 @@ var effectsObject = {
             var r = Math.round(value / 10);
             var x = 100 + Math.random() * (cw - 200);
             var y = 100 + Math.random() * (soundWave.canvas.height - 200);
-
-            var fillColor = fillColor;
 
             if(isMoreColor){
                 fillColor = 'rgba('+ Math.round(Math.random()) * 200 + ',' + Math.round(Math.random()) * 200 + ',' + Math.round(Math.random()) * 200 +', .8)';
@@ -230,6 +229,7 @@ var effectsObject = {
         soundWave.clearRect(0, 0, cw, ch);
         var canw = cw,
             canh = soundWave.canvas.height;
+        var fillColor = fillColor || '#F72A62';
         //画点
         var index = 0;
         var len = array[Math.floor(Math.random() * array.length)]  * array[Math.floor(Math.random() * array.length)] / 3 ;
@@ -241,14 +241,12 @@ var effectsObject = {
             //var y = Math.random() * (canh * .5) + canh / 4;
             var y = canh / 3 + (array[Math.floor(Math.random() * array.length)]);
 
-            var fillColor = fillColor;
-
             if(isMoreColor){
                 fillColor = 'rgba('+ Math.round(Math.random()) * 200 + ',' + Math.round(Math.random()) * 200 + ',' + Math.round(Math.random()) * 200 +', .8)';
             }
 
             soundWave.beginPath();
-            soundWave.fillStyle = fillColor; //'#F72A62';
+            soundWave.fillStyle = fillColor //'#F72A62';
             soundWave.arc(x, y, r, h, false);
             soundWave.fill();
             soundWave.closePath();
@@ -296,8 +294,8 @@ var effectsObject = {
             var x = cw / 2 + Math.abs(Math.sin(h / i * 5) * 270) + 5; //i * (meterWidth + 1);
             var y = Math.cos(h / i * 5) * -120 + ch / 4;
 
-            //soundWave.fillStyle = 'rgba(247, 42, 98, '+ Math.random() +')';
-            soundWave.fillStyle = fillColor;
+            soundWave.fillStyle = 'rgba(247, 42, 98, '+ Math.random() +')';
+            //soundWave.fillStyle = fillColor;
             soundWave.fillRect(x, y, meterWidth, h / 2.5);
             
             if(h > 0){
@@ -320,8 +318,8 @@ var effectsObject = {
             var x = cw / 2 - Math.sin(h / i * 5) * 270 + 5; //i * (meterWidth + 1);
             var y = Math.cos(h / i * 5) * -120 + ch / 4;
 
-            //soundWave.fillStyle = 'rgba(247, 42, 98, '+ Math.random() +')';
-            soundWave.fillStyle = fillColor;
+            soundWave.fillStyle = 'rgba(247, 42, 98, '+ Math.random() +')';
+            //soundWave.fillStyle = fillColor;
             soundWave.fillRect(x, y, meterWidth, h / 2.5);
             
             if(h > 0){
