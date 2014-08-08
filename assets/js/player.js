@@ -155,7 +155,7 @@ $(document).ready(function(evt){
 
 			//随机获取歌曲
 			song = res.song[Math.floor(Math.random() * res.song.length)];
-			//song = res.song[33]; //调式用
+			//song = res.song[39]; //调式用
 			
 			//设置标题和头像
 			songNameDom.html(song.title);
@@ -388,7 +388,7 @@ $(document).ready(function(evt){
 				soundWave.clearRect(0, 0, cw * 10, ch * 10);
 				return;
 			}
-			var color = 'rgba(6, 140, 118, ' + (index / 10 + .5) + ')';
+			var color = 'rgba(247, 42, 98, ' + (index / 10 + .5) + ')';
 			soundWave.restore();
 			soundWave.beginPath();
 			soundWave.fillStyle = color;

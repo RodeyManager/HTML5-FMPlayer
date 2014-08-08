@@ -67,13 +67,18 @@
 		 * @return {[type]} [description]
 		 */
 		_fatchAPI: function(){
-			window.hasAudioContext = (window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.msAudioContext);
+			window.AudioContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.msAudioContext;
 			window.hasRequestAnimation = (window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.msRequestAnimationFrame);
+			
+			//try catch比较耗时
 			try {
 	            this.audioContext = new AudioContext();
 	        } catch (e) {
-	            alert('您的浏览器不支持AudioContext！', false);
+	            //alert('您的浏览器不支持AudioContext！', true);
+				console.log('您的浏览器不支持AudioContext！');
 	            console.log(e);
+	            window.location.reload();
+	            return false;
 	        }
 		},
 
@@ -291,6 +296,16 @@
         	self.source.stop(currTime || 0);
         	self.playing = false;
 
+        	this.audioContext = null;
+			self.source = null;
+			self.analyser = null;
+			self.gainNode = null;
+			self.filter = null;
+        	delete self.audioContext;
+			delete self.source;
+			delete self.analyser;
+			delete self.gainNode;
+			delete self.filter;
 		},
 
 		/**

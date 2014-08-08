@@ -2,6 +2,54 @@
 	"code": "200",
 	"song": [
 		{
+			"title": "筷子兄弟 - 小苹果",
+			"url": "assets/audio/筷子兄弟 - 小苹果.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "assets/images/v_106419746_m_601_m1_160_90.jpg",
+			"lrc": "assets/lrc/小苹果.lrc"
+		},
+		{
+			"title": "五月天 - 天使",
+			"url": "assets/audio/五月天 - 天使.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "assets/images/108041507.jpg",
+			"lrc": "assets/lrc/天使.lrc"
+		},
+				{
+			"title": "英格玛 - 乌兰巴托的爸爸",
+			"url": "assets/audio/英格玛 - 乌兰巴托的爸爸.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "assets/images/8601a18b87d6277f05257e3d2a381f30e924fc84.jpg",
+			"lrc": "assets/lrc/乌托兰的爸爸.lrc"
+		},
+		{
+			"title": "群星 - 你不是真正的快乐(特别版)",
+			"url": "assets/audio/群星 - 你不是真正的快乐(特别版).mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "assets/images/b03533fa828ba61e757f2fd44334970a314e59bc.jpg",
+			"lrc": "assets/lrc/你不是真正的快乐.lrc"
+		},
+		{
+			"title": "张国荣 - 暴风一族",
+			"url": "assets/audio/张国荣 - 暴风一族.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "assets/images/37d3d539b6003af32a5da365372ac65c1138b6cb.jpg",
+			"lrc": "assets/lrc/暴风一族.lrc"
+		},
+		{
+			"title": "梅艳芳 - 孤身走我路 - 演唱会版",
+			"url": "assets/audio/梅艳芳 - 孤身走我路 - 演唱会版.mp3",
+			"ext": "mp3",
+			"duration": "4.10",
+			"image": "assets/images/d4628535e5dde711a29e23f3a5efce1b9d166162.jpg",
+			"lrc": "assets/lrc/孤身走我路.lrc"
+		},
+		{
 			"title": "陈慧娴 - 归来吧(粤语)",
 			"url": "http://a.10155.com/90115000/fulltrack_dl/MP3_40_16_Stero/2011042702/101900.mp3",
 			"ext": "mp3",

@@ -246,7 +246,7 @@ var effectsObject = {
             }
 
             soundWave.beginPath();
-            soundWave.fillStyle = fillColor //'#F72A62';
+            soundWave.fillStyle = 'rgba(247, 42, 98, '+ Math.random() +')'; //fillColor //'#F72A62';
             soundWave.arc(x, y, r, h, false);
             soundWave.fill();
             soundWave.closePath();
