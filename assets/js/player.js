@@ -65,7 +65,8 @@ var songsURL = 'data/wo_songs.json';
 
 //音波效果:  drawCircle || drawMeter || drawPoint || drawCirclePoint || 
 //			 drawBazire || drawMeterStreamgraph
-var eff = 'drawBazire';
+var effs = ['drawCircle', 'drawMeter', 'drawPoint', 'drawCirclePoint', 'drawBazire', 'drawMeterStreamgraph'];
+var eff = effs[Math.round(Math.random() * (effs.length - 1))];
 
 //渲染完毕后执行
 $(document).ready(function(evt){
@@ -155,7 +156,7 @@ $(document).ready(function(evt){
 
 			//随机获取歌曲
 			song = res.song[Math.floor(Math.random() * res.song.length)];
-			//song = res.song[39]; //调式用
+			//song = res.song[6]; //调式用
 			
 			//设置标题和头像
 			songNameDom.html(song.title);
@@ -176,6 +177,13 @@ $(document).ready(function(evt){
 	 * @return {[type]}        [description]
 	 */
 	function start(hamp, buffer){
+		$('#sound-wave').css({
+            '-webkit-transform': 'rotateX(0deg)',
+            '-moz-transform': 'rotateX(0deg)',
+            '-ms-transform': 'rotateX(0deg)',
+            '-o-transform': 'rotateX(0deg)',
+            'transform': 'rotateX(0deg)'
+        });
 		//清楚加载进度
 		endLoadingStyle();
 
@@ -210,6 +218,8 @@ $(document).ready(function(evt){
     	//播放歌词
 		playLRC();
 		
+		eff = effs[Math.round(Math.random() * (effs.length - 1))];
+		console.log(eff);
 		//播放音波效果
         playAnalyser(eff, 1);
 	
